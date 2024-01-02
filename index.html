@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .section,
+    .slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section h2,
+    .slide h2 {
+        color: #03fcfc;
+    }
+
+    .section:nth-child(even),
+    .slide:nth-child(even) {
+        background-color: #007c7c;
+    }
+</style>
+
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <h2>Section 1</h2>
+        </div>
+        <div class="section">
+            <h2>Section 2 <br/></h2>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <h2>Section 3</h2>
+                <img src="img/toothless-dancing-toothless.gif" alt="toothless">
+            </div>
+            <div class="slide">
+                <h2>Section 3</h2>
+                <img src="img/download.jpg" alt="toothlesss">
+            </div>
+            <div class="slide">
+                <h2>Section 3</h2>
+                <img src="img/artworks-53PRbQuF5MpRpSqB-ofB95w-t500x500.jpg" alt="toothlesss">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#e0fcff', '#86bbc2', '#3c727a'],
+                anchors: ['section1', 'section2', 'section3'],
+                menu: '#menu',
+                navigation: true,
+                navigationPosition: 'right',
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+            });
+        });
+    </script>
+</body>
+
+</html>
